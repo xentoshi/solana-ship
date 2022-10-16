@@ -1,14 +1,25 @@
 import { ArrowForwardIcon } from '@chakra-ui/icons'
 import { Container, Text, Heading, VStack, Button, HStack} from '@chakra-ui/react'
+import { useWallet } from '@solana/wallet-adapter-react'
+import { useWalletModal } from '@solana/wallet-adapter-react-ui'
 import { FC, MouseEventHandler, useCallback } from 'react'
 
 const Disconnected: FC = () => {
+
+    const modalState = useWalletModal()
+    const { wallet, connect } = useWallet()
     
     const handleClick: MouseEventHandler<HTMLButtonElement> = useCallback(
         (event) => {
             if(event.defaultPrevented) return 
+
+            if(!wallet) {
+                modalState.setVisible(true)
+            } else {
+                connect().catch(() => {})
+            }
         },
-        []
+        [wallet, connect, modalState]
     )
     
     
