@@ -19,11 +19,11 @@ const Connected: FC = () => {
                 </VStack>
             </Container>
             <HStack spacing={10}>
-                <Image src="toy1.png" alt="" width="200px"/>
-                <Image src="toy2.png" alt="" width="200px"/>
-                <Image src="toy3.png" alt="" width="200px"/>
-                <Image src="toy4.png" alt="" width="200px"/>
-                <Image src="toy5.png" alt="" width="200px"/>
+                <Image src="toy1.png" alt="" width="100px"/>
+                <Image src="toy2.png" alt="" width="100px"/>
+                <Image src="toy3.png" alt="" width="100px"/>
+                <Image src="toy4.png" alt="" width="100px"/>
+                <Image src="toy5.png" alt="" width="100px"/>
             </HStack>
 
             <Button bgColor="accent" color="white" maxW="380px">

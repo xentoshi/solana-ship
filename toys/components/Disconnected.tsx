@@ -26,7 +26,7 @@ const Disconnected: FC = () => {
     return (
         <Container>
             <VStack spacing={20}>
-            <Heading color="black" as="h1" size="3xl" noOfLines={2} textAlign="center">
+            <Heading color="white" as="h1" size="3xl" noOfLines={2} textAlign="center">
                 Mint your toys. Earn $FUN. Level up.
             </Heading>
             <Button bgColor="accent" color="white" maxW="300px" onClick={handleClick}>
